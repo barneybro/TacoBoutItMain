@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TacoBoutIT Menu</title>
+        <link rel="stylesheet" href="resources/taco.css">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+        <link rel="manifest" href="resources/site.webmanifest">
+    </head>
+    <body>
+        
+        <header>
+            <div class="nav-block">
+                <div class="nav-left">
+                    <a class="btn" href="index.html"><button class="pushable-header"><span class="front-header">Home</span></button></a>
+                    <a class="btn" href="resources/REALAboutUs.html"><button class="pushable-header"><span class="front-header">About Us</span></button></a>
+                    <a class="btn" href="resources/Gallery.html"><button class="pushable-header"><span class="front-header">Gallery</span></button></a>
+                    <a class="btn" href="menu.html"><button class="pushable-header"><span class="front-header">Menu</span></button></a>
+                </div>
+                <div class="nav-right">
+                    <a class="btn" href="signup.html"><button class="pushable-header"><span class="front-header">Sign Up</span></button></a>
+                    <a class="btn" href="login.html"><button class="pushable-header"><span class="front-header">Login</span></button></a>
+                </div>
+            </div>
+        </header>
+        <article class="containter content-section">
+            <div id="menu"></div>
+            <div class="cart-block">
+                <h2 class="category">Cart</h2>
+                <div class="items-block">
+                    <ul class="cart-items" id="cart-items"></ul>
+                </div>
+                <p class="total-price-cart">Total: $<span id="total-value">0</span></p>
+            </div>
+        </article>
+        <div id="overlay" class="overlay"></div>
+
+        <div id="cartPopup1" class="model">
+            <div class="model-content">
+                <h1>Select Payment Type</h1>
+                <button onclick="selectPayment('Card')">Card</button>
+                <button onclick="selectPayment('PayAtStore')">Pay at Store</button>
+                <button onclick="closeCartPopup1()">Close</button>
+            </div>
+        </div>
+        
+        <div id="receiptPopup" class="model">
+            <div class="model-content">
+                <h1>Receipt</h1>
+                <div id="receiptContent"></div>
+                <div class="total-overlay">Total: $<span id="receiptTotal"></span></div>
+                <button onclick="closeReceiptPopup()">Close</button>
+            </div>
+        </div>
+        
+        <div id="cardPaymentPopup" class="model">
+            <div class="model-content">
+                <h1>Card Payment</h1>
+                <label for="cardHolderName">Cardholder Name:</label>
+                <input type="text" id="cardHolderName" placeholder="Enter cardholder name">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter card number">
+                <label for="expirationDate">Expiration Date:</label>
+                <input type="text" id="expirationDate" placeholder="Enter expiration date">
+                <button onclick="processCardPayment()">Submit Payment</button>
+                <button onclick="closeCardPaymentPopup()">Cancel</button>
+            </div>
+        </div>
+        <div class="checkout-btn">
+          <button class="pushable-checkout" onclick=openCartPopup1()><span class="front-checkout">Checkout</span></button>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="https://www.facebook.com/tacoboutit.2023/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/alwaysboutlit/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.youtube.com/@AlwaysBoutIT" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a href="https://twitter.com/tacoboutlT" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+            
+                <div class="row">
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+            
+                <div class="row">
+                    Copyright © 2023 GroupA - All rights reserved || Designed By: GroupA 
+                </div>
+
+            </div>
+        </footer>
+
+            <ion-icon src="/path/to/external/file.svg"></ion-icon>
+            
+        <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+        <script src="resources/taco.js">
+            const appetizers = JSON.parse(localStorage.getItem('appetizers')) || [];
+            const tacos = JSON.parse(localStorage.getItem('tacos')) || [];
+            const entrees = JSON.parse(localStorage.getItem('entrees')) || [];
+            const desserts = JSON.parse(localStorage.getItem('desserts')) || [];
+            const drinks = JSON.parse(localStorage.getItem('drinks')) || [];
+        </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Manager View</title>
+    <link rel="stylesheet" href="resources/taco.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+    <link rel="manifest" href="resources/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="nav-block">
+            <div class="nav-left">
+                <a class="btn" href="index.html"><button class="pushable-header"><span class="front-header">Home</span></button></a>
+                <a class="btn" href="resources/REALAboutUs.html"><button class="pushable-header"><span class="front-header">About Us</span></button></a>
+                <a class="btn" href="resources/Gallery.html"><button class="pushable-header"><span class="front-header">Gallery</span></button></a>
+                <a class="btn" href="menu.html"><button class="pushable-header"><span class="front-header">Menu</span></button></a>
+            </div>
+            <div class="nav-right">
+                <a class="btn" href="signup.html"><button class="pushable-header"><span class="front-header">Sign Up</span></button></a>
+                <a class="btn" href="login.html"><button class="pushable-header"><span class="front-header">Login</span></button></a>
+            </div>
+        </div>
+    </header>
+    <h1 class="title">Menu Manager</h1>
+    <div class="manager-section">
+        <form id="addItemForm">
+            <label for="category">Category:</label>
+            <div class="select">
+                <select id="category" required>
+                    <option value="appetizers">Appetizers</option>
+                    <option value="tacos">Tacos</option>
+                    <option value="entrees">Entrees</option>
+                    <option value="drinks">Drinks</option>
+                </select>
+            </div>
+            
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" required>
+            
+            <label for="itemPrice">Item Price:</label>
+            <input type="number" id="itemPrice" step="0.01" required>
+            
+            <button class="pushable-header" type="button" onclick="addItem()"><span class="front-header">Add Item</span></button>
+        </form>
+    </div>
+
+    <div class="menu-container" id="menuContainer"></div>
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.facebook.com/tacoboutit.2023/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/alwaysboutlit/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.youtube.com/@AlwaysBoutIT" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a href="https://twitter.com/tacoboutlT" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+        
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+        
+            <div class="row">
+                Copyright © 2023 GroupA - All rights reserved || Designed By: GroupA 
+            </div>
+
+        </div>
+    </footer>
+
+        <ion-icon src="/path/to/external/file.svg"></ion-icon>
+        
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+</body>
+<script src="resources/taco.js">
+localStorage.setItem('appetizers', JSON.stringify(appetizers));
+localStorage.setItem('tacos', JSON.stringify(tacos));
+localStorage.setItem('entrees', JSON.stringify(entrees));
+localStorage.setItem('desserts', JSON.stringify(desserts));
+localStorage.setItem('drinks', JSON.stringify(drinks));
+</script>
+</html>
+
+
+
