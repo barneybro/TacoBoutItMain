@@ -197,10 +197,20 @@ img {
     transition: 1.0s;
 }
 .heading {
-    font-size:25px;
+    font-size: 2.5rem; /* Scalable size for readability */
     margin-top: 10vh;
-    border-bottom: solid #721121 75px;
-   
+    padding-bottom: 0.5rem;
+    text-align: center;
+    color:  #721121;
+    text-shadow:0in 0in 0.1in yellow;
+    font-family: 'Lobster', cursive;
+    font-size: 280%;
+    word-spacing: 2px;
+}
+
+.heading h4 {
+    margin-bottom: 0;
+    font-weight: 400;
 }
 
 .container {
